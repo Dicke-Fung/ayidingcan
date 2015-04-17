@@ -1,0 +1,16 @@
+<ion-view title="计划订餐">
+	<ion-content>
+		<ion-toggle ng-repeat="item in settingsList"
+		            ng-model="item.checked"
+		            ng-checked="item.checked">
+			{{ item.text }}
+		</ion-toggle>
+
+		<ion-list id="planList" style="margin-top: 50px;">
+			<ion-checkbox  ng-repeat="itemd in items" ng-model="itemd.selected">
+				{{itemd.label}} : {{itemd.selected}}
+			</ion-checkbox>
+		</ion-list>
+
+	</ion-content>
+</ion-view>

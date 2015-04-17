@@ -1,0 +1,26 @@
+<ion-view title="阿姨订餐">
+	<ion-content class="padding">
+		<div class="head"
+		     style="background-image: url(img/headImg.jpg);background-size: cover;position:relative;height: 120px;">
+		</div>
+		<div class="item item-divider">
+			今日菜式
+		</div>
+
+		<ion-list class="list">
+			<ion-item class="item item-icon-right" ng-repeat="testItem in testItems" item="testItem" ng-controller="PopupCtrl"
+			          ng-click="showConfirm()" data-id="{{testItem.id}}">
+
+				问题标题： {{ testItem.title }}
+				<i class="icon ion-heart"></i>
+			</ion-item>
+			<a style="margin-top: 50px;" class="item item-icon-right" href="#">
+				订餐时间
+				<span class="item-note">
+         了解详细
+        </span>
+				<i class="icon ion-chevron-right"></i>
+			</a>
+		</ion-list>
+	</ion-content>
+</ion-view>

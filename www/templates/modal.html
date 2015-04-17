@@ -1,0 +1,20 @@
+<div class="modal">
+	<ion-header-bar class="bar bar-header bar-positive">
+		<h1 class="title">登录</h1>
+		<button class="button button-clear button-primary" ng-click="modal.hide()">取消</button>
+	</ion-header-bar>
+
+	<ion-content class="padding">
+		<div class="list">
+			<label class="item item-input">
+				<span class="input-label">账号</span>
+				<input type="text" name="account" ng-model="formData.account">
+			</label>
+			<label class="item item-input">
+				<span class="input-label">密码</span>
+				<input type="password" name="pass" ng-model="formData.pass">
+			</label>
+		</div>
+		<a ng-controller="loginController" ng-click="processForm()" class="button icon icon-right ion-arrow-right-c button-balanced button-block">登录</a>
+	</ion-content>
+</div>
